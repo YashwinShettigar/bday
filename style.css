@@ -1,0 +1,196 @@
+/* Reset basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* General Section Style */
+.section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Landing Page */
+#landing {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.landing-photo {
+  margin: 20px 0;
+}
+
+#landing-image {
+  width: 80%;          /* Adjust width as needed */
+  max-width: 500px;    /* Set a max-width to prevent it from becoming too large */
+  border-radius: 10px; /* Optional: To round the edges of the photo */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Adding shadow to the image */
+  transition: transform 0.3s ease; 
+}
+
+#landing-image:hover {
+  transform: scale(1.05);  
+}
+
+.title {
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 2px 2px #ff69b4;
+  margin-bottom: 20px;
+  animation: fadeInDown 2s ease;
+}
+
+#start-btn {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#start-btn:hover {
+  background: #ff1493;
+  transform: scale(1.1);
+}
+
+/* Memories */
+#memories h2 {
+  margin-bottom: 30px;
+  color: #ff1493;
+}
+
+.memory-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.memory-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 200px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.memory-card.visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Typing Effect Section */
+#message {
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+}
+.song {
+  visibility: hidden;
+}
+#typing-text {
+  font-size: 2rem;
+  max-width: 600px;
+  color: #d63384;
+  border-right: 2px solid #d63384;
+  white-space: normal; /* <-- changed */
+  overflow: visible;
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+
+/* Cake Section */
+#cake {
+  background: #fff0f5;
+}
+
+#birthday-cake {
+  width: 200px;
+  animation: bounce 2s infinite;
+  margin-bottom: 20px;
+}
+
+.candles {
+  display: flex;
+  gap: 20px;
+}
+
+.candle {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.candle:hover {
+  transform: scale(1.2);
+}
+
+#wish-message {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #ff1493;
+  min-height: 30px;
+}
+
+/* Fireworks Section */
+#fireworks {
+  background: #000;
+  color: #fff;
+  position: relative;
+}
+
+#fireworks-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#fireworks h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 2.5rem;
+  margin-top: 100px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}

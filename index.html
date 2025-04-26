@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Birthday Guddi 🎉</title>
+
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Font (for nicer look) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Confetti Background -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Landing Section -->
+  <section id="landing" class="section">
+    <h1 class="title">Happy Birthday <span id="friend-name">Guddi</span> 🎉</h1>
+    
+    <!-- Photo for Landing Page -->
+    <div class="landing-photo">
+      <img src="images/guddi.jpeg" alt="Birthday Photo" id="landing-image">
+    </div>
+  
+    <button id="start-btn">Start the Magic ✨</button>
+  </section>
+
+
+  <!-- Birthday Message Section -->
+  <section id="message" class="section">
+    <h2 id="typing-text"></h2>
+  </section>
+
+  <!-- Surprise Cake Section -->
+  <section id="cake" class="section">
+    <img src="images/cake.jpg" alt="Birthday Cake" id="birthday-cake">
+    <p>Click the candles to make a wish! 🕯️</p>
+    <div class="candles">
+      <div class="candle" onclick="makeWish()">🕯️</div>
+      <div class="candle" onclick="makeWish()">🕯️</div>
+      <div class="candle" onclick="makeWish()">🕯️</div>
+    </div>
+    <div id="wish-message"></div>
+  </section>
+
+  <!-- Fireworks Section -->
+  <section id="fireworks" class="section">
+    <canvas id="fireworks-canvas"></canvas>
+    <h2>My Sweet Little Guddiiiii 🌟🎸</h2>
+  </section>
+
+  <!-- Background Music -->
+  <audio class="song" loop autoplay>
+    <source src="sounds/happy-birthday.mp3">
+    </source>
+    Your browser isn't invited for super fun audio time.
+</audio>
+
+  <!-- Link to JS -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
